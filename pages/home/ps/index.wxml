@@ -1,0 +1,131 @@
+<view class="container">
+  <view class="page-body">
+    <view class="top-btn">
+        <button class="service" size="mini" bind:tap="doc">教程</button>
+        <button class="service" size="mini" open-type="share">分享</button>
+        
+    </view>
+    <view class="page-section">
+      <movable-area style="width: {{imgW}}px;height: {{imgH}}px;">
+        <image src="{{img}}" style="width: {{imgW}}px;height: {{imgH}}px;" ></image>
+        <movable-view class="movable-1" bind:tap="input" style="width: {{inputW}}px;height: {{inputH}}px;background-color: {{bgColor}};" wx:if="{{start}}" x="{{x}}" y="{{y}}" bindchange="watch" direction="all">
+          <view class="input-text" style="color: {{fontColor}};">
+            <view style=" font-family: {{fontFamily}}, 'Fallback Font', sans-serif;font-size: {{fontSize}}px ">
+              {{word}}
+            </view>
+          </view>
+        </movable-view>
+        <movable-view out-of-bounds="true" class="movable-2" x="50" y="50" bindchange="watchColor" direction="all">
+        <image src="/images/select-color.png" mode=""/>
+        </movable-view>
+      </movable-area>
+    </view>
+  </view>
+
+  <view class="select-image" wx:if="{{!start}}">
+    <view class="select-btn" catchtap="tap">
+      选择图片
+    </view>
+    <view class="tips">
+      注意：第一次保存图片时系统会弹出窗口授权保存图片到相册，请点同意授权，否则图片会保存不了！！！如果不会使用的话可以看看右上角的视频教程
+    </view>
+    <view class="tips">
+      取色器：绿色的手指是取色器，把取色器移动到原图背景或者字体处，点击取色按钮可以获取到相同的颜色，从而让背景或者字体颜色跟原图一致，一次取不到颜色，就尝试移动到合适的位置多试几次总能取到你想要的颜色的
+    </view>
+    <view class="tips">
+      图片文字修改：图片文字修改的总体思路是通过设置跟原图一样的背景和字体覆盖原来的背景和文字，从而达到修图改字的目的
+    </view>
+  </view>
+
+  <view wx:if="{{showInput}}" class="input-body">
+    <view class="input-container" ><input class="input" type="text" value="{{word}}" bindinput="getStr" placeholder="输入文字,上面文字框可拖动"/></view>
+    <view class="top-top-btn">    
+    <image class="top-item" bind:tap="top" src="/images/move.png" mode=""/>
+  </view>
+  <view class="left-right">
+    <view class="left-btn" bind:tap="left">    
+      <image  src="/images/move.png" mode=""/>
+    </view>
+    <view class="right-btn" bind:tap="right">  
+      <image src="/images/move.png" mode=""/>
+    </view>
+  </view>
+  <view class="top-top-btn">    
+    <image class="bottom-item" bind:tap="bottom" src="/images/move.png" mode=""/>
+  </view>
+  </view>
+  <view class="font-slide-container" wx:if="{{selectBtn=='font'}}">
+    <view class="font-slide">
+    <view class="label">大小</view>
+    <view class="slide-content">
+      <image class="slide-image slide-image-left" src="/images/left.png" mode="" bind:tap="fontLeft"/>
+      <slider class="slide-item" step="0.05" bindchanging="sliderChangeFont" value="{{scaleValue}}" min="0.3" max="5" show-value/>
+      <image class="slide-image slide-image-right" src="/images/right.png" mode="" bind:tap="fontRight"/>
+    </view>
+    </view>
+    <view class="font-slide" style="padding: 15rpx 0px;">
+    <view bind:tap="getColor" class="label" data-type="font" >
+      选字体
+    </view>
+    <scroll-view class="color-content" scroll-x="true">
+        <image src="/images/{{item.name}}.png" wx:for="{{fonts}}" wx:key="{{item}}" bind:tap="getFont" data-font="{{item.name}}" data-fontFile="{{item.value}}" class="color-item" 
+                wx:if="{{index!=0}}"
+                style="width: 80rpx;height: 45rpx;display: inline-block;" />
+    </scroll-view>
+    </view>
+    <view class="font-slide">
+    <view bind:tap="getColor" class="get-font-color" data-type="font" >
+      取色
+    </view>
+    <scroll-view class="color-content" scroll-x="true">
+        <view wx:for="{{colors}}" wx:key="{{item}}" bind:tap="getFontColor" data-color="{{item}}" class="color-item" 
+                wx:if="{{index!=0}}"
+                style="width: 40rpx;height: 40rpx;border-radius: 20rpx;display: inline-block;background: {{item}};">
+        </view>
+    </scroll-view>
+    </view>
+  </view>
+  <view class="bg-slide-container" wx:if="{{selectBtn=='bg'}}">
+    <view class="bg-slide">
+    <view class="label">
+      宽
+    </view>
+    <view class="slide-content">
+      <image class="slide-image slide-image-left" src="/images/left.png" mode="" bind:tap="widthLeft"/>
+      <slider class="slide-item" step="0.05" bindchanging="sliderChangeW" value="{{scaleValueW}}" min="0.01" max="5" show-value/>
+      <image class="slide-image slide-image-right" src="/images/right.png" mode="" bind:tap="widthRight"/>
+    </view>
+    </view>
+    <view class="bg-slide">
+      <view class="label">
+        高
+      </view>
+      <view class="slide-content">
+        <image class="slide-image slide-image-left" src="/images/left.png" mode="" bind:tap="heightLeft"/>
+        <slider class="slide-item" step="0.05" bindchanging="sliderChangeH" value="{{scaleValueH}}" min="0.01" max="5" show-value/>
+        <image class="slide-image slide-image-right" src="/images/right.png" mode="" bind:tap="heightRight"/>
+      </view>
+    </view>
+    <view class="bg-slide" style="width: 90%;">
+      <view style="color: white;" bind:tap="getColor" data-type="bg" class="get-font-color label">
+      取色
+    </view>
+    <scroll-view class="color-content" scroll-x="true">
+        <view wx:for="{{colors}}" wx:key="{{item}}" bind:tap="getBgColor" data-color="{{item}}" class="color-item" 
+                style="text-align: center;width: 40rpx;height: 40rpx;border-radius: 20rpx;display: inline-block;background: {{item}};font-size: 30rpx;color: {{index!=0?item:'black'}};">
+                {{index==0?'无':'1'}}
+        </view>
+    </scroll-view>
+    </view>
+  </view>
+  <view class="btn-container" wx:if="{{showSlide}}">
+    <view class="button" style="border-bottom:{{selectBtn=='font'?'5rpx solid #3CC4A9':''}};color:{{selectBtn=='font'?'#3CC4A9':'darkgray'}} ;" bind:tap="select" data-type="font">字体设置</view>
+    <view class="button" style="border-bottom:{{selectBtn=='bg'?'5rpx solid #3CC4A9':''}};color:{{selectBtn=='bg'?'#3CC4A9':'darkgray'}}" bind:tap="select" data-type="bg">背景设置</view>
+    <view class="button" style="border-bottom:{{selectBtn=='input'?'5rpx solid #3CC4A9':''}};color:{{selectBtn=='input'?'#3CC4A9':'darkgray'}}" bind:tap="select" data-type="input">输入设置</view>
+  </view>
+
+  <view class="op-btn" wx:if="{{showSave}}">
+    <view class="save-btn" bind:tap="post" data-type="post">保存</view>
+    <view class="save-btn" bind:tap="reset" data-type="reset">重置</view>
+  </view>
+</view>

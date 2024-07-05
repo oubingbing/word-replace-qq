@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home/ps/index",
+    "pages/home/index/index",
+    "pages/home/count_str/index",
+    "pages/home/image_word/index",
+    "pages/home/pinyin/index",
+    "pages/home/doc/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#333333",
+    "navigationBarTitleText": "图片文字修改",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#66CDAA",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/ps/index",
+        "iconPath": "images/pic-text.png",
+        "selectedIconPath": "images/select-pic-text.png",
+        "text": "图片文字替换"
+      },
+      {
+        "pagePath": "pages/home/index/index",
+        "iconPath": "images/replace.png",
+        "selectedIconPath": "images/select-replace.png",
+        "text": "文字替换"
+      },
+      {
+        "pagePath": "pages/home/count_str/index",
+        "iconPath": "images/count.png",
+        "selectedIconPath": "images/select-count.png",
+        "text": "字数统计"
+      },
+      {
+        "pagePath": "pages/home/image_word/index",
+        "iconPath": "images/get.png",
+        "selectedIconPath": "images/select-get.png",
+        "text": "文字提取"
+      },
+      {
+        "pagePath": "pages/home/pinyin/index",
+        "iconPath": "images/pinyin.png",
+        "selectedIconPath": "images/select-pinyin.png",
+        "text": "汉字转拼音"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,73 @@
+<view class="index-container">
+  <view class='index-content'>
+
+    <view class="replace-content">
+      <view class="replace-item" wx:for="{{dataList}}" wx:key="index">
+        <image class="delete-image" bindtap="deleteLine" data-id="{{index}}" src="/images/delete-line.png"></image>
+        <view class="replace-str">
+          <view class="replace-label">将</view>
+          <input class="replace-input" bindinput="getStr" value="{{item.from}}" data-id="{{index}}" data-type="from" placeholder="请输入被替换的文字" />
+        </view>
+        <view class="replace-target">
+          <view class="replace-label">替换为</view>
+          <input class="target-input" bindinput="getStr" value="{{item.to}}" data-id="{{index}}" data-type="to" placeholder="请输入替换的文字" />
+        </view>
+      </view>
+      <view bindtap="addMore" class="add-more"><view>添加多行</view></view>
+    </view>
+    <view class="model-content">
+        <view class="model-item" catchtap="saveModel">
+          存为模板
+        </view>
+        <view class="model-item" catchtap="showMyModelLlist">
+          我的模板
+        </view>
+      </view>
+
+    <view class="wx-import-btn" catchtap="import">从文件导入</view>
+    <view class="replace-data">
+      <view class="src_title">原文</view>
+      <textarea class="replace-txt" bindinput="getContent" maxlength="-1" value="{{content}}" placeholder="请输入需要替换的文本内容" name="textarea" />
+    </view>
+
+    <view class="copy">
+      <view class="copy-btn" catchtap="replace">替换</view>
+      <view class="copy-btn" catchtap="copy">复制</view>
+      <view class="copy-btn" catchtap="clean">清空</view>
+      <view class="copy-btn" catchtap="save_text">保存文件</view>
+    </view>
+
+    <view class="result-content">
+      <view class="src_title">结果</view>
+      <textarea class="replace-txt" placeholder="结果输出" maxlength="-1" value="{{result}}" name="textarea" />
+    </view>
+
+  </view>
+      <!--我的模板-->
+      <view class="my-model" wx:if="{{showModelList}}">
+      <view class="my-model-content">
+        <view class="model-container">
+          <view class="model-title">
+            <view>
+              我的模板
+            </view>
+            <image catchtap="closeMyModel" class="close-btn"  src="/images/delete-line.png" alt=""/>
+          </view>
+          <view class="my-model-info" wx:for="{{modelList}}" wx:key="{{item.name}}">
+            <view class="model-name">
+              {{item.name}}
+            </view>
+            <view class="model-btn">
+              <view data-type="{{index}}" class="model-delete" catchtap="deleteMyModel" >
+                删除
+              </view>
+              <view class="model-use" data-type="{{index}}" catchtap="importModel">
+                使用
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </view>
+</view>

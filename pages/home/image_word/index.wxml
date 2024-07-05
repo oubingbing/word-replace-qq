@@ -1,0 +1,18 @@
+<import src="/towxml/entry.wxml" />
+<view class="index-container">
+  <view class='index-content'>
+
+    <view class="copy">
+      <view class="copy-btn" bindtap="countStr">提取文字</view>
+      <view class="copy-btn" bindtap="copy">复制</view>
+      <view class="copy-btn" catchtap="clean">清空</view>
+    </view>
+
+    <view class="copy tip-info"><view>提取过程大概需要15秒左右</view></view>
+
+    <view class="count-result" wx:if="{{content.length>0}}">
+      <template is="entry" data="{{...markata}}" />
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,296 @@
+
+.index-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-content{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50rpx;
+}
+
+.replace-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0rpx 0rpx 15rpx 6rpx gainsboro;
+  border-radius: 10rpx;
+  padding: 10rpx 0rpx;
+}
+
+.delete-image{
+  width: 50rpx;
+  height: 50rpx;
+  z-index: 100;
+  position: absolute;
+  right: 0rpx;
+  top: 10rpx;
+}
+
+.replace-item{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: solid;
+  border-color: gainsboro;
+  border-width: 1rpx;
+  position: relative;
+}
+
+.add-more{
+  width: 100%;
+  font-size: 20rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+  color: darkgray;
+  align-items: center;
+  justify-content: center;
+}
+
+.replace-str{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  font-size: 32rpx;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10rpx 0rpx;
+}
+
+.replace-input{
+  width: 80%;
+  background: gainsboro;
+  padding: 10rpx 10rpx;
+  font-size: 30rpx;
+}
+
+.replace-target{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  font-size: 32rpx;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10rpx 0rpx;
+}
+
+.replace-label{
+  width: 20%;
+}
+
+.target-input{
+  width: 80%;
+  background: gainsboro;
+  padding: 10rpx 10rpx;
+  font-size: 30rpx;
+}
+
+.wx-import-btn{
+    margin-top: 70rpx;
+    width: 170rpx;
+    background: #3CC4A9;
+    color: white;
+    font-size: 25rpx;
+    padding: 10rpx 10rpx;
+    border-radius: 30rpx;
+    box-shadow: 0rpx 0rpx 15rpx 6rpx gainsboro;
+    text-align: center;
+    margin-right: 30rpx;
+    margin-bottom: 25rpx;
+}
+
+.replace-data{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0rpx 0rpx 15rpx 6rpx gainsboro;
+  border-radius: 10rpx;
+  align-items: center;
+}
+
+.replace-txt{
+  padding: 10rpx 10rpx;
+  width: 95%;
+  font-size: 30rpx;
+}
+
+.result-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0rpx 0rpx 15rpx 6rpx gainsboro;
+  border-radius: 10rpx;
+  align-items: center;
+  margin-bottom: 50rpx;
+  font-size: 30rpx;
+}
+
+.copy{
+  margin-top: 70rpx;
+  margin-bottom: 25rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.copy-btn{
+  width: 150rpx;
+  background: #3CC4A9;
+  color: white;
+  font-size: 25rpx;
+  padding: 10rpx 10rpx;
+  border-radius: 30rpx;
+  box-shadow: 0rpx 0rpx 15rpx 6rpx gainsboro;
+  text-align: center;
+  margin-right: 30rpx;
+}
+
+.contact{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10rpx;
+  align-items: center;
+  margin-bottom: 70rpx;
+  font-size: 28rpx;
+  color: darkgray;
+}
+
+.src_title{
+  width: 100%;
+  color: white;
+  text-align: center;
+  background: #3CC4A9;
+  font-size: 25rpx;
+  padding: 10rpx 0rpx;
+  box-shadow: 0rpx 0rpx 15rpx 6rpx gainsboro;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+
+.service{
+    font-size: 25rpx;  
+    color: white;  
+    background: #3CC4A9;
+    /* 如果需要，添加间距 */  
+}
+
+.model-content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.model-item{
+  font-size: 25rpx;
+  color: #3CC4A9;
+  width: 17%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.my-model{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7); 
+  display: flex;flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-model-content{
+  width: 90%;
+  background: white;
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx 0rpx;
+  border-radius: 15rpx;
+}
+
+.model-container{
+  width: 95%;
+  background: white;
+  padding-bottom: 20rpx;
+}
+
+.close-btn{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  z-index: 200;
+  right: -18rpx;
+  top: -20rpx;
+}
+
+.model-title{
+  width: 100%;
+  font-size: 30rpx;
+  padding: 20rpx 0rpx;
+  border-bottom: 1px solid gainsboro; 
+  text-align: center;
+  position: relative;
+}
+
+.my-model-info{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 0rpx;
+  border-bottom: 1px solid gainsboro; 
+}
+
+.model-name{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 30rpx;
+}
+
+.model-btn{
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  font-size: 25rpx;
+  justify-content: space-between;
+}
+
+.model-delete{
+  width: 45%;
+  background:red;
+  color: white;
+  font-size: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+}
+
+.model-use{
+  width: 45%;
+  background: #3CC4A9;
+  color: white;
+  font-size: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rpx;
+}

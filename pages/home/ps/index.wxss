@@ -1,0 +1,484 @@
+page{
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movable-2{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 25rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: flashEffect 1s ease-in-out infinite;
+  }
+
+  .movable-2 image {
+    width: 60rpx;
+    height: 60rpx;
+  }
+
+  /* 闪烁动画 */
+@keyframes flashEffect {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.left-btn{
+}
+
+.right-btn{
+}
+
+.top-top-btn{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.left-right{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 20rpx;
+}
+
+.tips{
+  font-size: 25rpx;
+  width: 90%;
+  margin-top: 80rpx;
+}
+
+.top-item{
+  width: 60rpx;
+  height: 60rpx;
+  transform: rotate(180deg);
+}
+
+.bottom-item{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.right-btn image{
+  width: 60rpx;
+  height: 60rpx;
+  transform: rotate(270deg);
+}
+
+.left-btn image{
+  width: 60rpx;
+  height: 60rpx;
+  transform: rotate(90deg);
+}
+
+.bottom-btn-tb image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.bottom-btn{
+  position: fixed;
+  z-index: 200;
+  top: 550rpx;
+  right: 0rpx;
+}
+
+  .movable-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50rpx;
+    width: 230rpx;
+    background: #fff;
+    color: black;
+    border: 1px solid;
+    animation: run-border 3s linear infinite;
+    padding:0rpx;
+    margin: 0rpx;
+  }
+
+        @keyframes run-border {
+            0% { border-color: #FF0000 #FF7F00 #FFFF00 #7FFF00; }   /* Red, Orange, Yellow, Light Green */
+            25% { border-color: #00FF00 #00FF7F #00FFFF #007FFF; }  /* Green, Light Blue, Cyan, Blue */
+            50% { border-color: #0000FF #7F00FF #FF00FF #FF007F; }  /* Blue, Purple, Magenta, Pink */
+            75% { border-color: #FF0000 #FF7F00 #FFFF00 #7FFF00; }  /* Red, Orange, Yellow, Light Green */
+            100% { border-color: #00FF00 #00FF7F #00FFFF #007FFF; } /* Green, Light Blue, Cyan, Blue */
+        }
+
+  .input-text{
+    padding: 0rpx;
+    margin: 0rpx;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes blink-border {
+    0%, 100% { border-color: #000; } /* 边框颜色 */
+    50% { border-color: transparent; } /* 透明 */
+  }
+
+  .button{
+    display: flex;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:150rpx;
+    height: 50rpx;
+    color: black;
+    font-size: 30rpx;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  .button-select{
+    border-bottom:1rpx solid #3CC4A9;
+  }
+
+  .btn-container{
+    width: 100%;
+    height: 80rpx;
+    background: white;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .select-image{
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 25rpx;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 50rpx;
+  }
+
+  .select-btn{
+    width: 150rpx;
+    height: 100%;
+    background: #3CC4A9;
+    padding: 10rpx 10rpx;
+    border-radius: 30rpx;
+    text-align: center;
+  }
+
+  .get-font-color{
+    width: 70rpx;
+    height: 30rpx;
+    background: #3CC4A9;
+    padding: 10rpx 10rpx;
+    border-radius: 35rpx;
+    text-align: center;
+    font-size: 25rpx;
+    color: white;
+    margin-right: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @keyframes blink-border {
+    0%, 100% { border-style: solid; }
+    50% { border-style: none; }
+  }
+
+  .bg-color-content{
+    width: 100%;
+    height: 200rpx;
+    background: white;
+    position: fixed;
+    z-index: 100;
+    bottom: 80rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .font-slide-container{
+    width: 100%;
+    height: 230rpx;
+    background: white;
+    position: fixed;
+    z-index: 100;
+    bottom: 80rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.font-slide{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg-slide-container{
+    width: 100%;
+    height: 220rpx;
+    background: white;
+    position: fixed;
+    z-index: 100;
+    bottom: 80rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.slide-content{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 0rpx 15rpx;
+}
+
+.color-content{
+    width: 80%;
+    height: 50rpx;
+    white-space: nowrap;
+}
+
+.slide-item{
+  width: 70%;
+  padding: 0rpx 10rpx;
+  padding: 0rpx 10rpx;
+}
+
+.slide-image{
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.slide-image-left{
+}
+
+.slide-image-right{
+  right: 0rpx;
+}
+
+.slide{
+    width: 85%;
+}
+
+.font-slide{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.label{
+    width: 15%;
+    text-align: left;
+    color: #3CC4A9;
+    font-size: 30rpx;
+}
+
+.color-item{
+  border:1rpx solid gainsboro;
+}
+
+.color-item-tm{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  display: flex;
+  font-size: 15rpx;
+  background: white;
+  border:1rpx solid gainsboro;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-slide{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #3CC4A9;
+}
+
+  .input{
+      width: 80%;
+      text-align: center;
+      font-size: 24rpx;
+      font-family: PingFangSC, PingFangSC-Regular;
+      font-weight: 400;
+      color: #7d7d7d;
+      background: gainsboro;
+      padding: 5rpx 0rpx;
+      border-radius: 30rpx;
+  }
+  
+  movable-area {
+    margin: 50rpx;
+    background-color: #ccc;
+    margin-bottom: 330rpx;
+  }
+  
+  .max {
+    width: 600rpx;
+    height: 600rpx;
+  }
+  
+  .page-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .scroll-view_H{
+    white-space: nowrap;
+  }
+  .scroll-view-item{
+    height: 300rpx;
+  }
+  .scroll-view-item_H{
+    display: inline-block;
+    width: 100%;
+    height: 300rpx;
+  }
+
+  .top-btn{
+      width: 80rpx;
+      height: 80rpx;
+      position: fixed;
+      z-index: 100;
+      right: 0rpx;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      top: 100rpx;
+  }
+  
+  button {
+    border-width: 0 !important;
+    outline: none; /*333333 移除聚焦时的边框 */
+    background: #333333 !important; /* 移除边框伪元素 */
+  }
+  button:after {
+    display: none !important; /* 移除边框伪元素 */
+    background: #333333 !important; /* 移除边框伪元素 */
+  }
+  button {
+    font-size: 20rpx !important;
+    padding: 0rpx !important;
+  }
+
+  .service{
+      width: 80rpx;
+      height: 40rpx;
+      font-size: 20rpx;
+      color: #3CC4A9;
+      padding: 0rpx;
+      border-radius: 25rpx;
+      text-align: center;
+  }
+
+  .plus-btn{
+    width: 30rpx;
+    height: 30rpx;
+    z-index: 100;
+    position: absolute;
+    top: -20rpx;
+    right: -20rpx;
+    background: white;
+    border-radius: 20rpx;
+  }
+
+  .sub-btn{
+    width: 30rpx;
+    height: 30rpx;
+    z-index: 100;
+    position: absolute;
+    bottom: -20rpx;
+    right: -20rpx;
+    background: white;
+    border-radius: 20rpx;
+  }
+
+  .op-btn{
+    height: 150rpx;
+    display: flex;
+    flex-direction: column;
+    z-index: 300;
+    position: fixed;
+    right: 0rpx;
+    bottom: 350rpx;
+  }
+
+  .save-btn{
+    background:#ff6000;
+    margin: 17rpx 0rpx;
+    margin-right: 10rpx;
+    font-size: 25rpx;
+    padding: 5rpx 13rpx;
+    border-radius: 20rpx;
+    color: white;
+  }
+
+  .input-container{
+    width: 100%;
+    height: 90rpx;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 10rpx;
+  }
+
+  .input-body{
+    width: 100%;
+    height: 230rpx;
+    background: white;
+    position: fixed;
+    z-index: 100;
+    bottom: 80rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+  }
+
+

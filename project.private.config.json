@@ -1,0 +1,88 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "%E6%96%87%E5%AD%97%E6%9B%BF%E6%8D%A2%E5%B7%A5%E5%85%B7",
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "libVersion": "3.4.7",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "教程",
+          "pathName": "pages/home/doc/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "图片文字修改",
+          "pathName": "pages/home/ps/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "表白",
+          "pathName": "pages/index/post/post",
+          "query": ""
+        },
+        {
+          "name": "微信聊天窗口",
+          "pathName": "pages/wechat/single_chat/single_chat",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "测试编辑图片",
+          "pathName": "pages/common/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "编辑截图",
+          "pathName": "pages/common/edit_screen/edit_screen",
+          "query": "type=1",
+          "scene": null
+        },
+        {
+          "name": "测试截图",
+          "pathName": "pages/common/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "群聊截图",
+          "pathName": "pages/wechat/group_chat/group_chat",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "微信红包截图",
+          "pathName": "pages/wechat/redpacket/redpacket",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "使用教程",
+          "pathName": "pages/common/course/course",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付截图",
+          "pathName": "pages/wechat/paid/paid",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "钱包截图",
+          "pathName": "pages/wechat/wallet/wallet",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

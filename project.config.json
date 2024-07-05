@@ -1,0 +1,120 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": false,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"useMultiFrameRuntime": true,
+		"useApiHook": true,
+		"useApiHostProcess": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enableEngineNative": false,
+		"bundle": false,
+		"useIsolateContext": true,
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false,
+		"userConfirmedBundleSwitch": false,
+		"packNpmManually": false,
+		"packNpmRelationList": [],
+		"minifyWXSS": true,
+		"remoteDebugLogEnable": false,
+		"prefetch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.25.3",
+	"appid": "wx4472faef4940277f",
+	"projectname": "%E5%9B%BE%E7%89%87%E6%96%87%E5%AD%97%E4%BF%AE%E6%94%B9",
+	"packOptions": {
+		"ignore": [],
+		"include": []
+	},
+	"editorSetting": {
+		"tabIndent": "insertSpaces",
+		"tabSize": 2
+	},
+	"qqappid": "1110964259",
+	"scripts": {},
+	"condition": {
+		"miniprogram": {
+			"list": [
+				{
+					"name": "表白",
+					"pathName": "pages/index/post/post",
+					"query": ""
+				},
+				{
+					"name": "微信聊天窗口",
+					"pathName": "pages/wechat/single_chat/single_chat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "测试编辑图片",
+					"pathName": "pages/common/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "编辑截图",
+					"pathName": "pages/common/edit_screen/edit_screen",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"name": "测试截图",
+					"pathName": "pages/common/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "群聊截图",
+					"pathName": "pages/wechat/group_chat/group_chat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "微信红包截图",
+					"pathName": "pages/wechat/redpacket/redpacket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "使用教程",
+					"pathName": "pages/common/course/course",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "支付截图",
+					"pathName": "pages/wechat/paid/paid",
+					"query": "",
+					"scene": null
+				},
+				{
+					"name": "钱包截图",
+					"pathName": "pages/wechat/wallet/wallet",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

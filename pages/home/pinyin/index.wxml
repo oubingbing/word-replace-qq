@@ -1,0 +1,26 @@
+<view class="index-container">
+  <view class='index-content'>
+
+  <view class="replace-data">
+    <textarea class="replace-txt" bindinput="getContent" maxlength="-1" placeholder="请输入需要转成拼音的汉字" value="{{content}}" name="textarea"/>
+  </view>
+
+  <view class="copy">
+    <view class="copy-btn" bindtap="countStr">转拼音</view><view class="copy-btn" bindtap="copy">复制</view><view class="copy-btn" catchtap="clean">清空</view>
+  </view>
+
+  <view class="count-result"  wx:if="{{resultList.text.length>0}}">
+    <view class="r-item"><view class="r-word">{{resultList.text}}</view></view>
+  </view>
+
+  <view class="count-result count-result-bottom"  wx:if="{{resultList.text.length>0}}">
+    <view class="r-item-top-bottom">
+      <view class="r-word-item-info" wx:for="{{resultList.array}}">
+        <view class="">{{item.pinyin}}</view>
+        <view class="">{{item.ch}}</view>
+      </view>
+    </view>
+  </view>
+
+  </view>
+</view>
